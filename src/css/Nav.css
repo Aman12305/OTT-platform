@@ -25,10 +25,12 @@
   object-fit: contain;
 }
 
+
+
 .nav__avatar {
-  position: fixed;
-  top: 9px;
-  right: 20px;
-  width: 55px;
+  position: absolute;
+  top: 35px;
+  right: 50px;
+  width: 40px;
   object-fit: contain;
 }

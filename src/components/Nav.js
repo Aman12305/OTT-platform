@@ -19,7 +19,6 @@ function Nav() {
         <div className={`nav ${show && "nav__black"}`}>
             <img className="nav__logo" src="https://imgur.com/2aMx6CO.jpg" alt="Netflix Logo"/>
             <img className="nav__avatar" src="https://imgur.com/lUJ1ZKi.jpg" alt="Netflix Avatar"/>
-
         </div>
     )
 }
