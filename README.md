@@ -1,5 +1,5 @@
 
-# Streamtrend🔥![GitHub watchers] ![GitHub Repo stars](https://img.shields.io/github/stars/dhruba-datta/photoBooth?style=social) ![](https://visitor-badge.glitch.me/badge?page_id=dhruba-datta.dhruba-datta/photoBooth")
+# Streamtrend🔥![GitHub watchers] ![GitHub Repo stars](https://img.shields.io/github/stars/Aman12305/OTT-platform?style=social) ![](https://visitor-badge.glitch.me/badge?page_id=Aman12305/OTT-platform")
 
 
 **[Streamtrend](https://streamtrend.netlify.app/)** is a photo sharing web application with all advanced Social Media features made with React, Sanity, Tailwind & Google API.
