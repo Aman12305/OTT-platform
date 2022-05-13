@@ -19,6 +19,7 @@ function Description ({desmovies , setDesmovies}) {
                     const response = await youtube.get(`/search`, {
                         params: {
                             q: `${desmovies?.name || desmovies?.original_title || desmovies?.title || desmovies?.original_name} trailer`,
+                            regionCode: `${desmovies?.origin_country||""}`
                         }
                     });
                     setTrailerUrl(response.data.items[0].id.videoId);
@@ -47,7 +48,7 @@ function Description ({desmovies , setDesmovies}) {
         >
             <div className="banner__contents">
                 <h1 className="banner__title">
-                {truncate(desmovies?.title || desmovies?.name || desmovies?.original_name,20)}
+                {truncate(desmovies?.title || desmovies?.name,20)}
                 </h1>
             {/* <div className="banner__buttons">
                 <button className="banner__button">Play</button>

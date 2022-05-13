@@ -41,7 +41,7 @@ function Banner({ setDesmovies }) {
         >
             <div className="banner__contents">
                 <h1 className="banner__title">
-                {truncate(movie?.title || movie?.name || movie?.original_name,20)}
+                {truncate(movie?.title || movie?.name ,20)}
                 </h1>
             <div className="banner__buttons">
                 <button className="banner__button" onClick={()=>handleClick(movie)}>Play</button>
