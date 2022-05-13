@@ -3,7 +3,6 @@ import youtube from './youtube';
 import "../css/Banner.css";
 import movieTrailer from "movie-trailer";
 
-const base_url = "https://image.tmdb.org/t/p/original/";
 const youtube_url = "https://www.youtube.com/embed/";
 
 function Description ({desmovies , setDesmovies}) {
