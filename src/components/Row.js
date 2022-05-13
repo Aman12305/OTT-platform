@@ -20,7 +20,7 @@ function Row({ id,title, fetchUrl, isLargeRow , setDesmovies}) {
         return request;
     }
     fetchData();
-    }, []);
+    }, [fetchUrl]);
 
     // console.log(movies);
 
