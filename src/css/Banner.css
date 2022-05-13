@@ -70,14 +70,22 @@
 
 .icon{
   position: absolute;
-  right: 20px;
-  top: 10px;
+  top: 70px;
+  right: 30px;
   width: 25px;
   height: 25px;
   cursor: pointer;
-  fill: rgb(152, 148, 148);
+  padding: 5px 5px;
+  border-radius: 50%;
+  fill: rgb(192, 192, 192);
+  background-color: rgb(37, 36, 36);
 }
 
-.icon:hover{
+ .icon:hover{
   fill: white;
+  background-color: #111;
 }
+
+/* .icon:hover{
+  fill: white;
+} */
