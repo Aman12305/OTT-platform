@@ -3,7 +3,6 @@ import youtube from './youtube';
 import "../css/Banner.css";
 import movieTrailer from "movie-trailer";
 
-const base_url = "https://image.tmdb.org/t/p/original/";
 const youtube_url = "https://www.youtube.com/embed/";
 
 function Description ({desmovies , setDesmovies}) {
@@ -12,6 +11,7 @@ function Description ({desmovies , setDesmovies}) {
 
     movieTrailer(desmovies?.name || desmovies?.original_title || desmovies?.title || desmovies?.original_name,{tmdbId: desmovies?.id,apikey: "cca3ad1fd48f3b685ab9f13de8d466ec"})
             .then(url => {
+                console.log(desmovies);
                 const urlParams= new URLSearchParams(new URL(url).search);
                 setTrailerUrl(urlParams.get('v'));
             }).catch(
@@ -20,8 +20,10 @@ function Description ({desmovies , setDesmovies}) {
                     const response = await youtube.get(`/search`, {
                         params: {
                             q: `${desmovies?.name || desmovies?.original_title || desmovies?.title || desmovies?.original_name} trailer`,
+                            regionCode : `${desmovies?.origin_country}`
                         }
                     });
+                    console.log(response);
                     setTrailerUrl(response.data.items[0].id.videoId);
                 }
 

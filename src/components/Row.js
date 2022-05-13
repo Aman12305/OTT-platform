@@ -47,7 +47,7 @@ function Row({ id,title, fetchUrl, isLargeRow , setDesmovies}) {
                                 onClick={()=> handleClick(movie)}
                                 className= {`row__poster ${isLargeRow && "row__posterLarge"}`}
                                 src={`${base_url}${movie.backdrop_path}`} alt={movie.name}/>
-                                <h2 className='row_title'>{truncate(movie?.name || movie?.name || movie?.original_title || movie?.title || movie?.original_name,20) }</h2>
+                                <h2 className='row_title'>{truncate(movie?.name || movie?.title ,20) }</h2>
                         </div>
                     ))}
                     {/* posters */}
