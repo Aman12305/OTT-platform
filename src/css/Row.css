@@ -40,24 +40,7 @@
   font-size: 12px;
 }
 
-.row_youtube{
-  display: flex;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
 
-.icon{
-  position: absolute;
-  right: 20px;
-  top: 10px;
-  width: 25px;
-  height: 25px;
-  cursor: pointer;
-  fill: rgb(152, 148, 148);
-}
 
-.icon:hover{
-  fill: white;
-}
+
+
