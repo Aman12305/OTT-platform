@@ -27,7 +27,7 @@ function Description ({desmovies , setDesmovies}) {
                     // console.log(response.data.items[0].id.videoId);
                     setTrailerUrl(response.data.items[0].id.videoId);
                 }).catch(err => {
-                    console.log(err.message);
+                    // console.log(err.message);
                 })
 
 
