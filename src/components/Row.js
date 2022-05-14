@@ -25,7 +25,7 @@ function Row({ id,title, fetchUrl, isLargeRow , setDesmovies}) {
     // console.log(movies);
 
     const handleClick = useCallback(movie => {
-            console.log(movie);
+            // console.log(movie);
             setDesmovies(movie);
         }, [setDesmovies]);
 

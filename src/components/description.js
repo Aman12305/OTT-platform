@@ -1,32 +1,42 @@
-import React, {useState,useCallback} from 'react';
+import React, {useState,useCallback, useEffect} from 'react';
 import youtube from './youtube';
 import "../css/Banner.css";
 import movieTrailer from "movie-trailer";
 
 const youtube_url = "https://www.youtube.com/embed/";
 
+
 function Description ({desmovies , setDesmovies}) {
 
     const [trailerUrl, setTrailerUrl] = useState("");
 
-    movieTrailer(desmovies?.name || desmovies?.original_title || desmovies?.title || desmovies?.original_name,{tmdbId: desmovies?.id,apikey: "cca3ad1fd48f3b685ab9f13de8d466ec"})
+    useEffect(()=>{
+        setTrailerUrl("");
+        movieTrailer(desmovies?.name || desmovies?.title,{tmdbId: desmovies?.id,apikey: "cca3ad1fd48f3b685ab9f13de8d466ec"})
             .then(url => {
                 const urlParams= new URLSearchParams(new URL(url).search);
                 setTrailerUrl(urlParams.get('v'));
-            }).catch(
-                
-                async (err) => {
-                    const response = await youtube.get(`/search`, {
-                        params: {
-                            q: `${desmovies?.name || desmovies?.original_title || desmovies?.title || desmovies?.original_name} trailer`,
-                            regionCode: `${desmovies?.origin_country||""}`
-                        }
-                    });
+            }).catch((err) => {
+
+                youtube.get(`/search`, {
+                    params: {
+                        q: `${desmovies?.name || desmovies?.title} trailer`,
+                        regionCode: `${desmovies?.origin_country}`,
+                    }
+                }).then(response => {
+                    // console.log(response.data.items[0].id.videoId);
                     setTrailerUrl(response.data.items[0].id.videoId);
-                }
+                }).catch(err => {
+                    console.log(err.message);
+                })
 
-            ) ;
 
+            });
+
+    },[desmovies.name, desmovies.title, desmovies.id, desmovies.origin_country]);
+
+
+                
             const handleClick = useCallback(movie => {
                 setDesmovies("");
             }, [setDesmovies]);
@@ -61,7 +71,8 @@ function Description ({desmovies , setDesmovies}) {
             </div>
             <div className="banner--fadeBottom"/>
         </header>
-        <div className='row_youtube'>
+        <div className='row_youtube'> 
+           
          <iframe title = {desmovies.name}frameBorder="0" allow = "accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" height="490" width="100%" src={`${youtube_url}${trailerUrl}?rel=0`} allowFullScreen ></iframe>
          
         

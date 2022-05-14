@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       {/* Navbanner */}
-      <Nav />
+      <Nav setDesmovies={setDesmovies}/>
       {desmovies && <Description desmovies={desmovies} setDesmovies={setDesmovies}/>}
       {!desmovies && <Banner setDesmovies={setDesmovies}/>}
       

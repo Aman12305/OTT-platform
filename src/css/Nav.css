@@ -19,13 +19,90 @@
 
 .nav__logo {
   position: fixed;
-  top: -43px;
+  top: -25px;
   left: 0;
-  width: 150px;
+  width: 120px;
   object-fit: contain;
 }
 
+.navsearch{
+  display: flex;
+  position: absolute;
+  align-items: center;
+  right: 100px;
+  max-width: 280px;
+  width: 40%;
+  top: 30px;
+  height: 50px;
+  border-radius: 10px 10px;
+  background-color: rgb(39, 38, 38);
+  object-fit: contain;
+}
 
+.navsearch__input{
+  position: relative;
+  border-radius: 10px 0 0 10px;
+  padding: 1px 10px;
+  left: 0;
+  width: 72%;
+  max-width: 260px;
+  color: white;
+  height: 48px;
+  border: none;
+  background-color: rgb(39, 38, 38);
+}
+
+.search_icon{
+  position: absolute;
+  width: 20px;
+  right: 10px;
+  cursor: pointer;
+  fill: rgb(205, 207, 210);
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+.search_icon:hover{
+  fill: white;
+}
+
+.search_menu{
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  right: 100px;
+  max-width: 280px;
+  width: 40%;
+  top: 80px;
+  flex-direction: column;
+  background-color: rgb(39, 38, 38);
+  object-fit: contain;
+
+}
+
+.search_content{
+  display: flex;
+  position: relative;
+  align-items: center;
+  max-width: 280px;
+  width: 90%;
+  padding: 0 10px;
+  height: 40px;
+  background-color: rgb(39, 38, 38);
+  object-fit: contain;
+  color: rgb(155, 153, 153);
+  cursor: pointer;
+  transform: 0.5s ease;
+
+}
+
+.search_content:hover{
+  background-color: #111;
+  color: white;
+}
 
 .nav__avatar {
   position: absolute;
