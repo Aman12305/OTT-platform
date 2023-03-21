@@ -29,7 +29,7 @@ function App() {
       setDesmovies={setDesmovies}
       />}
 
-      {
+      {/* {
       !desmovies &&
       <Row 
       id="row2"
@@ -47,7 +47,7 @@ function App() {
       fetchUrl={requests.fetchDisneyOriginals} 
       isLargeRow
       setDesmovies={setDesmovies}
-      />}
+      />} */}
       { !desmovies && <Row id="row4" title="Trending now" fetchUrl={requests.fetchTrending}  setDesmovies={setDesmovies}/>}
       {!desmovies && <Row id="row5" title="Top Rated" fetchUrl={requests.fetchTopRated} setDesmovies={setDesmovies} />}
       {!desmovies && <Row id="row6" title="Action Movies" fetchUrl={requests.fetchActionMovies} setDesmovies={setDesmovies} />}
