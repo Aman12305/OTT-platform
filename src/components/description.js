@@ -20,7 +20,7 @@ function Description ({desmovies , setDesmovies}) {
 
                 youtube.get(`/search`, {
                     params: {
-                        q: `${desmovies?.name || desmovies?.title} trailer`,
+                        q: `${desmovies?.name || desmovies?.title} official trailer`,
                         regionCode: `${desmovies?.origin_country}`,
                     }
                 }).then(response => {
